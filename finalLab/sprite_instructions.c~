@@ -1,0 +1,46 @@
+//sprite_instructions.c
+//by Ethan Geller
+//
+//instructions for drawing various sprites, including:
+//1. Start screen
+//2. dice, pre-roll
+//3. dice, mid-roll
+//4. dice, roll result
+//5. enemy 1: "Chaos Sphere"
+//6. enemy 2: "Shadow Cube"
+//7. enemy 3: "Lightning Pyramid"
+//8. enemy 4: "Twin Dragon"
+//9. Game Over screen
+
+#include <f3d_lcd_sd.h>
+#include <f3d_delay.h>
+#include <glcdfont.h>
+
+void draw_start_screen(){
+  f3d_lcd_fillScreen(WHITE);
+
+  f3d_lcd_drawString(0,0,"YATZDEE AND D", BLACK, WHITE);
+  f3d_lcd_drawString(50, 19, "By Ethan Geller", RED, WHITE);
+  f3d_lcd_drawString(30, 24, "and Johnny O'Donnell", BLUE, WHITE);
+  f3d_lcd_drawString(0, 34, "In which Yatzdee and D,", GREEN, WHITE);
+  f3d_lcd_drawString(10, 39, "two adventurous rogue dice,", RED, WHITE);
+  f3d_lcd_drawString(0, 44, "fight", BLACK, WHITE);
+  f3d_lcd_drawString(30, 44, "insidiously geometric", RED, WHITE);
+  f3d_lcd_drawString(0, 49, "monsters...", BLACK, WHITE);
+  f3d_lcd_drawString(0, 80, "Press C to start...", BLACK, WHITE);
+}
+
+//GAME SCREEN
+//Main regions:
+//Player Status: (0:44, 0:49)
+//Dice Sprite: (0:44, 50:99)
+//Monster Sprite: (45:89, 0:49)
+//Monster Info: (45:89, 50:99)
+//Status Text: (0:89, 100:159)
+
+void clear_player_status(){
+  int x,y;
+  for(x=0; x<45; x++)
+    for(y=0; y<50; y++)
+      f3d_lcd_drawPixel(x,y,BLACK);
+}

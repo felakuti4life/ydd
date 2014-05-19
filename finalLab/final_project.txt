@@ -1,0 +1,28 @@
+Ethan Geller
+Johnny O'Donnell
+
+Game Concept:
+     The game concept is a cross between yahtzee and Dungeons
+     and Dragons. Essentially, the user rolls a dice to decide
+     his fate against one of many monsters, including a dragon.
+
+     Based on what the user roles, he or she will either attack
+     the monster or be attacked. In the event that both the user
+     and the computer roll the same values, neither the monster
+     nor the user attacks.
+
+Task Breakdown:
+     Ethan Geller:
+     	   Game Plot
+	   Game Board Design
+	   Monster Graphics
+	   Status Text Updates
+	   Opening Screen
+	   Dice Interface
+	   Tweek Options
+     Johnny O'Donnell:
+     	    Audio Configuration
+	    Dice Roll Simulation
+	    Basic Game Idea
+	    SD Card Mangement
+
